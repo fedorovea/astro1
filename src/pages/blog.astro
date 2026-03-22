@@ -1,9 +1,11 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 
 import "../styles/global.css";
 
 const pageTitle = "Astro";
+
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -16,7 +18,7 @@ const pageTitle = "Astro";
 		<title>{pageTitle}</title>
 	</head>
     <body>
-      <Navigation />
+      <Header />
         
       <h1>{pageTitle}</h1>
       <p>This is where I will post about my journey learning Astro.</p>
@@ -25,5 +27,11 @@ const pageTitle = "Astro";
           <li><a href="/posts/post-2/">Post 2</a></li>
           <li><a href="/posts/post-3/">Post 3</a></li>
         </ul>
+      <Footer />
+        <script>
+          const menu = document.querySelector('.menu');
+
+          import "../scripts/menu.js";
+        </script>
     </body>
 </html>
